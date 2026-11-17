@@ -4,7 +4,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://invitations-production-9e56550b.up.railway.app/album"
+  to = "https://invitations-production-9e56550b.up.railway.app/api/:splat"
   status = 200
   force = true
 
