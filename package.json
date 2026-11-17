@@ -1,0 +1,37 @@
+{
+  "name": "alexandra-althea-invite",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"node --env-file=.env server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "qr": "node qr.js"
+  },
+  "engines": {
+    "node": ">=20.6"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.750.0",
+    "@aws-sdk/s3-request-presigner": "^3.750.0",
+    "@mdi/font": "^7.4.47",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "autoprefixer": "^10.4.20",
+    "compression": "^1.7.5",
+    "concurrently": "^9.0.1",
+    "express": "^4.19.2",
+    "postcss": "^8.4.47",
+    "qrcode": "^1.5.4",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.8",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vue": "^3.5.10",
+    "vue-router": "^4.4.5",
+    "vuetify": "^3.7.2"
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node",
+    "esbuild": "npm:esbuild-wasm@^0.21.5"
+  }
+}

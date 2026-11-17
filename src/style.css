@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #1b3a6b; --deep: #1f4a8a; --blue: #3f78c6; --peri: #8c9cf0; --sky: #cfe2fa;
+}
+html { scroll-behavior: smooth; background: #b3b6f5; }
+body { margin: 0; overflow-x: hidden; }
+
+.v-application {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 19px;
+  color: var(--ink) !important;
+  background: linear-gradient(160deg, #a9cdf8 0%, #a7b6f5 48%, #c6a9f2 100%) !important;
+}
+.v-application .v-btn, .v-application .v-btn-toggle .v-btn {
+  font-family: 'Cinzel', Georgia, serif !important;
+  letter-spacing: .14em;
+  font-weight: 500;
+}
+.v-application .v-field__input, .v-application .v-label { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 18px; }
+:focus-visible { outline: 3px solid var(--peri); outline-offset: 3px; }
+
+/* page transition: soft blur + slide */
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s ease, transform .6s cubic-bezier(.22, .8, .2, 1), filter .5s ease;
+}
+.page-enter-from { opacity: 0; transform: translateY(28px) scale(.985); filter: blur(8px); }
+.page-leave-to  { opacity: 0; transform: translateY(-18px) scale(.99); filter: blur(6px); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
